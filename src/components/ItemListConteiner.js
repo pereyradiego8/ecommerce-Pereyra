@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 
@@ -30,7 +29,6 @@ export const ItemListContainer = () =>  {
     <div className="container">
       Items {categoryId}
       <ItemList items={items}/>
-      <ItemCount stock="10" initial="1" />
     </div>
   );
 }

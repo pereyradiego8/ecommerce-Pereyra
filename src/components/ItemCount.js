@@ -16,6 +16,10 @@ export function ItemCount({ stock, initial, onAdd }) {
     setCount(count - 1);
   };
 
+  const agregar = () => {
+    onAdd(count);
+  };
+
   return (
     <div className="w-25 flex-column align-items-strech">
       <div className="m-2 p-2 d-flex flex-row justify-content-around align-items-center border-secondary border rounded">
@@ -38,10 +42,9 @@ export function ItemCount({ stock, initial, onAdd }) {
         </button>
       </div>
       <button
-        disabled={count >= 1}
         className="btn btn-outline-primary w-75"
         type="button"
-        onClick={onAdd}
+        onClick = { agregar }
       >
         Agregar al carrito
       </button>
