@@ -11,7 +11,7 @@ export const Item = ({ item }) => {
       </div>
       
       
-      <Link to={`/item/${item.title}`}> Link al item</Link>
+      <Link to={`/item/${item.title}`}>Link al item</Link>
 
 
     </div>

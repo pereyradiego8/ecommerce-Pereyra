@@ -8,13 +8,12 @@ export const NavBar = () => {
       <Link to='/' className="navbar-brand" >
         DP Componentes
       </Link>
-
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <NavLink exact to='/' activeClassName="active" className="nav-item nav-link" >
-            Home
-          </NavLink>
-          <NavLink to={`/category/motherboards`} activeClassName="active" className="nav-item nav-link" >
+			<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  <span className="navbar-toggler-icon"></span>
+			</button>
+			<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  <div className="navbar-nav">
+				<NavLink to={`/category/motherboards`} activeClassName="active" className="nav-item nav-link" >
             Motherboards
           </NavLink>
           <NavLink to={`/category/procesadores`} activeClassName="active" className="nav-item nav-link" >
@@ -29,17 +28,7 @@ export const NavBar = () => {
         </div>
       </div>
       <CartWidget />
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </nav>
   );
 };
+export default NavBar;

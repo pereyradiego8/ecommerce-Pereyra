@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const getItems = (id) => {
     return  new Promise((resolve)=>{
         setTimeout(()=>{resolve({
-            title:"un Item",
+            title: id,
             price: 25.5,
             description: "Un muy lindo item  con ID: " + id,
             img:""
@@ -15,7 +15,7 @@ const getItems = (id) => {
     })
 }
 
-export default function ItemDetailContainer() {
+export const ItemDetailContainer = () =>  {
     const [item, setItem] = useState(null)
     const {itemId} = useParams()
 
@@ -27,3 +27,4 @@ export default function ItemDetailContainer() {
      return <> {itemId}
      <ItemDetail item={item} /></>
     }
+    export default ItemDetailContainer;
